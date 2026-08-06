@@ -217,6 +217,12 @@ spec:
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
+      - name: ADDITIONAL_BASE_IMAGES
+        value:
+          - quay.io/konflux-ci/oras:latest@sha256:b38167deed2c10441fc9b810055ab1763a4dfb14b1a2144b6b37a9fa7d806a2a
+          - quay.io/konflux-ci/clair-in-ci:v1@sha256:25f95fc2ab90f492794e8388d779f43ccae81e9e275df05a63e5d40e0f3cf3e2
+      - name: CONTEXTUALIZE_SBOM_BUILDER
+        value: "true"
       runAfter:
       - prefetch-dependencies
       taskRef:
@@ -239,10 +245,6 @@ spec:
         - $(tasks.build-container.results.IMAGE_URL)@$(tasks.build-container.results.IMAGE_DIGEST)
       - name: BUILDAH_FORMAT
         value: $(params.buildah-format)
-      - name: ADDITIONAL_BASE_IMAGES
-        value:
-          - quay.io/konflux-ci/oras:latest@sha256:b38167deed2c10441fc9b810055ab1763a4dfb14b1a2144b6b37a9fa7d806a2a
-          - quay.io/konflux-ci/clair-in-ci:v1@sha256:25f95fc2ab90f492794e8388d779f43ccae81e9e275df05a63e5d40e0f3cf3e2
       runAfter:
       - build-container
       taskRef:
