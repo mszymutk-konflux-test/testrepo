@@ -242,8 +242,6 @@ spec:
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
-      - name: CONTEXTUALIZE_SBOM
-        value: "true"
       - name: ADDITIONAL_BASE_IMAGES
         value:
           - quay.io/konflux-ci/oras:latest@sha256:b38167deed2c10441fc9b810055ab1763a4dfb14b1a2144b6b37a9fa7d806a2a
