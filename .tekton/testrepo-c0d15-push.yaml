@@ -72,7 +72,7 @@ spec:
         1h, 2d, 3w for hours, days, and weeks, respectively.
       name: image-expires-after
       type: string
-    - default: "false"
+    - default: "true"
       description: Add built image into an OCI image index
       name: build-image-index
       type: string
@@ -221,7 +221,7 @@ spec:
         - name: name
           value: buildah-oci-ta-min
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-buildah-oci-ta-min:0.9@sha256:97c0d0ac1d508a70f8610c7dc79de453a990414fba7d7e0f8d21ec22f5796d96
+          value: quay.io/rh-ee-mszymutk/buildah-oci-ta-min:dev
         - name: kind
           value: task
         resolver: bundles
@@ -243,7 +243,7 @@ spec:
         - name: name
           value: build-image-index-min
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-build-image-index-min:0.3@sha256:fbb362f21e559606f8941cde6a2c0507c8af6cfc8bee88ffc38032e8e80b4b7e
+          value: quay.io/rh-ee-mszymutk/build-image-index-min:dev
         - name: kind
           value: task
         resolver: bundles
