@@ -41,3 +41,5 @@ If the workflow fails, an issue is opened on the updater repository for investig
 ### Forking for your own Konflux
 
 Fork [konflux-ci/testrepo](https://github.com/konflux-ci/testrepo) when you want a clean sample without Konflux metadata yet. For collaboration on the upstream Konflux sample itself, use the updater repository as described above.
+
+EPIC CHANGES
