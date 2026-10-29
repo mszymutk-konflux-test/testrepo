@@ -275,7 +275,7 @@ spec:
         - name: name
           value: sast-crypto-scan-oci-ta
         - name: bundle
-          value: quay.io/rh-ee-mszymutk/sast-crypto-scan-oci-ta:dev2
+          value: quay.io/rh-ee-mszymutk/sast-crypto-scan-oci-ta:test1
         - name: kind
           value: task
         resolver: bundles
